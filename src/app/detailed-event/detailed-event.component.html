@@ -1,0 +1,26 @@
+<div class="full-container">
+    <mat-grid-list cols="2">
+        <mat-grid-tile class="full-description">
+            <div>
+                <h2>All Things Open</h2>
+                <img src="https://allthingsopen.org/wp-content/uploads/2019/06/https___cdn.evbuc_.com_images_63697318_72322412725_1_original.jpg">
+                <p>All Things Open is a polyglot technology conference focusing on the tools, processes and people making open source possible. 
+                    Target audience includes designers, developers, decision makers, entrepreneurs and technologists of all types and skill levels.</p>
+                <p>All Things Open is the largest “open” technology event on the East Coast of the United States. In 2018, nearly 4,100 attended from 40 
+                    U.S. states and 24 countries. The seventh year of All Things Open will once again feature some of the top technologists and decision 
+                    makers in the world discussing the topics of open source, open technology, and the open web in the enterprise. Three days of programming 
+                    will feature the Inclusion in Open Source and Technology event on Sunday, October 13 as well as traditional keynote and session talks 
+                    on Monday October 14 and Tuesday October 15. Nearly every major technology company in the U.S. will be represented.</p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div>
+                <h3>Event Date: October 13-15, 2019</h3>
+                <button mat-raised-button color="primary" (click)="addToAttending()">RSVP</button>
+                <h3>Attending</h3>
+                <p *ngFor="let attendee of attendeeList">{{ attendee }}</p>
+            </div>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>

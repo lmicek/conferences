@@ -1,0 +1,12 @@
+.fill-toolbar {
+  flex: 1 1 auto;
+}
+
+.mat-icon {
+  color: #fff;
+}
+
+.mat-toolbar.toolbar-color {
+  background: #27323a;
+  color: #fff;
+}

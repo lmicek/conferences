@@ -1,0 +1,11 @@
+.event-card-container {
+  margin: 15px 30px;
+  max-width: 400px;
+  display: inline-flex;
+}
+
+.event-card { 
+  margin: 5px 5px;
+  min-height: 475px;
+  cursor: pointer;
+}

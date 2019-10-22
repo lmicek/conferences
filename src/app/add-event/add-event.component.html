@@ -1,0 +1,32 @@
+<div class="container"><mat-spinner *ngIf="resourcesLoaded === false"></mat-spinner></div>
+<section  *ngIf="resourcesLoaded === true" class="add-event-container" fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card class="add-event-card-content" fxFlex="500px" fxFlex.xs="100%">
+    <mat-card-title>Add an Event to FidEvents</mat-card-title>
+    <form [formGroup]="addEventForm" autocomplete="off" novalidate (ngSubmit)="createEvent(addEventForm.value)"
+      fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px" class="add-form">
+      <mat-card-content>
+        <mat-form-field class="add-full-width">
+          <input matInput placeholder="Event Name" formControlName="event_name">
+        </mat-form-field>
+
+        <mat-form-field class="add-full-width">
+          <input matInput [matDatepicker]="picker1" placeholder="Event Date" formControlName="event_date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="add-full-width">
+          <textarea matInput placeholder="Event Description" formControlName="event_description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="add-full-width">
+          <textarea matInput placeholder="Event Location" formControlName="event_location"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <button mat-raised-button color="primary" [disabled]="!addEventForm.valid">Submit</button>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</section>
